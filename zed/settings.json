@@ -1,0 +1,180 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+    "disable_ai": true,
+    "expand_excerpt_lines": 5,
+    "which_key": {
+        "enabled": false,
+    },
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 1000,
+        },
+    },
+
+    "vim_mode": false,
+    "text_rendering_mode": "platform_default",
+    "buffer_line_height": "standard",
+    "outline_panel": {
+        "dock": "left",
+    },
+    "collaboration_panel": {
+        "dock": "right",
+    },
+    "agent_servers": {
+        "codex-acp": {
+            "type": "registry",
+        },
+        "claude-acp": {
+            "type": "registry",
+        },
+    },
+    "status_bar": {
+        "active_encoding_button": "enabled",
+        "show_active_file": true,
+        "active_language_button": true,
+        "cursor_position_button": true,
+        "experimental.show": true,
+        "line_endings_button": true,
+    },
+    "git_panel": {
+        "diff_stats": true,
+        "file_icons": true,
+        "sort_by_path": true,
+        "status_style": "icon",
+        "dock": "right",
+    },
+    "toolbar": {
+        "breadcrumbs": false,
+        "quick_actions": false,
+    },
+    "search": {
+        "case_sensitive": false, // 默认是否区分大小写
+        "whole_word": false, // 默认是否全词匹配
+        "regex": false, // 默认是否开启正则表达式
+        "include_ignored": false, // 在项目搜索中是否包含被 .gitignore 忽略的文件
+        "button": true,
+        "center_on_match": true,
+    },
+    "terminal": {
+        "flexible": true,
+        "toolbar": {
+            "breadcrumbs": false,
+        },
+        "shell": {
+            "program": "nu",
+        },
+    },
+    "gutter": { "min_line_number_digits": 0, "bookmarks": false },
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
+    "base_keymap": "VSCode",
+    "icon_theme": {
+        "mode": "light",
+        "light": "Catppuccin Frappé",
+        "dark": "Catppuccin Mocha",
+    },
+    "ui_font_family": "Maple Mono",
+    "ui_font_size": 16,
+    "buffer_font_family": "Maple Mono",
+    "buffer_font_size": 13.5,
+
+    "tab_size": 4, // 你用啥？
+    "hard_tabs": false,
+    "format_on_save": "on",
+    "languages": {
+        "C++": {
+            "format_on_save": "on",
+            "tab_size": 4,
+        },
+        "C": {
+            "tab_size": 4,
+            "format_on_save": "on",
+        },
+        "Zig": {
+            "language_servers": ["zls"],
+            "format_on_save": "on",
+        },
+    },
+    "remove_trailing_whitespace_on_save": false, // 能跑就别动了
+    "restore_previous_session": "last_project",
+
+    "title_bar": {
+        "show_branch_status_icon": true,
+        "show_user_picture": false,
+        "show_user_menu": false,
+        "show_sign_in": false,
+        "show_onboarding_banner": false,
+        "show_menus": false,
+        "button_layout": "platform_default",
+        "show_branch_name": true,
+        "show_project_items": true,
+    },
+
+    "theme": {
+        "mode": "dark",
+        "light": "Ayu Light",
+        "dark": "Catppuccin Mocha (Blur) [Heavy]",
+    },
+    "minimap": {
+        "max_width_columns": 70,
+        "thumb_border": "full",
+        "display_in": "active_editor",
+        "current_line_highlight": "gutter",
+        "thumb": "hover",
+        "show": "always",
+    },
+    "git": {
+        "inline_blame": {
+            // 谁把代码改崩了？
+            "enabled": true,
+            "show_commit_summary": true,
+        },
+    },
+    "relative_line_numbers": "disabled",
+
+    "tabs": {
+        "git_status": true,
+    },
+
+    "project_panel": {
+        "dock": "right",
+        "button": true,
+    },
+
+    "lsp": {
+        "clangd": {
+            // 代码跳转全靠它了
+            "binary": {
+                "path": "D:\\Program Files\\LLVM\\bin\\clangd.exe",
+                "arguments": ["--header-insertion=never"], // 谁能给 Zed 做个 EdkCode 扩展？
+            },
+        },
+        "zls": {
+            "binary": {
+                "path": "zls",
+                "arguments": [],
+            },
+        },
+    },
+
+    "agent": {
+        "dock": "right",
+        "button": true,
+        "default_model": {
+            "provider": "google",
+            "model": "gemini-2.5-flash", // 免费
+        },
+        "use_modifier_to_send": true, // 防误触
+        "single_file_review": true,
+    },
+}
+
